@@ -1,24 +1,24 @@
 ---
 repos:
 - repo: git://github.com/asottile/add-trailing-comma
-  rev: v0.7.1
+  rev: v2.1.0
   hooks:
   - id: add-trailing-comma
 
 - repo: git://github.com/timothycrosley/isort
-  rev: 5.4.2
+  rev: 5.9.2
   hooks:
   - id: isort
     args:
     - --honor-noqa
 
 - repo: git://github.com/Lucas-C/pre-commit-hooks
-  rev: v1.1.6
+  rev: v1.1.10
   hooks:
   - id: remove-tabs
 
 - repo: git://github.com/pre-commit/pre-commit-hooks
-  rev: v2.3.0
+  rev: v4.0.1
   hooks:
   # Side-effects:
   - id: trailing-whitespace
@@ -49,19 +49,19 @@ repos:
   - id: debug-statements
 
 - repo: git://github.com/Lucas-C/pre-commit-hooks-markup
-  rev: v1.0.0
+  rev: v1.0.1
   hooks:
   - id: rst-linter
     files: >-
       ^README\.rst$
 
 - repo: git://github.com/pycqa/pydocstyle.git
-  rev: 5.0.2
+  rev: 6.1.1
   hooks:
   - id: pydocstyle
 
 - repo: https://github.com/adrienverge/yamllint.git
-  rev: v1.24.2
+  rev: v1.26.1
   hooks:
   - id: yamllint
     files: \.(yaml|yml)$
@@ -69,8 +69,8 @@ repos:
     args:
     - --strict
 
-- repo: https://gitlab.com/pycqa/flake8.git
-  rev: 3.8.3
+- repo: https://github.com/PyCQA/flake8
+  rev: 3.9.2
   hooks:
   - id: flake8
     language_version: python3
@@ -81,7 +81,7 @@ repos:
     - wemake-python-styleguide
 
 - repo: https://github.com/pre-commit/mirrors-mypy
-  rev: v0.782
+  rev: v0.910
   hooks:
   - id: mypy
     # empty args needed in order to match mypy cli behavior
